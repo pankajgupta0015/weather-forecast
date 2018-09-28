@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1 class="text-center primary "> Enter City and code for Weather Details</h1>
+
+
+  <form >
+    <div class="form-group">
+      <label > City</label>
+      <input type="text"  class="form-control"  name="city" [(ngModel)]="city">
+
+
+     <label > Code</label>
+      <input type="text"  class="form-control" name="code" [(ngModel)]="code">
+
+
+    </div>
+
+    <button class="btn btn-success center" (click)="findWeatherDetail()">Search </button>
+
+
+  </form>
+
+</div>

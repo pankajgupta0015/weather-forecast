@@ -1,0 +1,21 @@
+<div class="container">
+
+
+  <div class="info" *ngIf="weather?.cod == 200">
+    <h1>{{weather?.cod}}</h1>
+    <h1><strong> City: </strong>{{weather?.city.name}}</h1>
+    <h3>Longitude: {{weather?.city.coord.lon}}</h3>
+    <h3>Latitude : {{weather?.city.coord.lat}}</h3>
+    <h3><strong>Temp</strong>: {{weather?.list[0].main.temp}}</h3>
+    <h3><strong>tempMax: </strong>{{weather?.list[0].main.temp_max}}  </h3>
+    <h3><strong>tempMin: </strong>{{weather?.list[0].main.temp_min}}</h3>
+    <h3> <strong>The weather description: </strong> {{weather?.list[0].weather[0].description}}</h3>
+    <h3> <strong>Humidity : </strong>{{weather?.list[0].main.humidity}}</h3>
+    <h3> <strong>Wind Speed :</strong> {{weather?.list[0].wind.speed}}</h3>
+    
+  </div>
+  <div class="info" *ngIf="weather?.cod != 200">
+    <h2>Weather Details for the given City <strong>{{location.city}}</strong>not found </h2>
+  </div>
+
+</div>
